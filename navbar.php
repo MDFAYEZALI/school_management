@@ -19,7 +19,7 @@
       <li class="active"><a href="student_index.php">Student</a></li>
       <li><a href="parent_index.php">Parent</a></li>
       <li><a href="class_create.php">Class Create</a></li>
-      <li><a href="#">Page 3</a></li>
+      <li><a href="teacher_create.php">Teacher create</a></li>
     </ul>
   </div>
 </nav>
