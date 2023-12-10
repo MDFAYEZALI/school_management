@@ -18,7 +18,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="student_index.php">Student</a></li>
       <li><a href="parent_index.php">Parent</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="class_create.php">Class Create</a></li>
       <li><a href="#">Page 3</a></li>
     </ul>
   </div>

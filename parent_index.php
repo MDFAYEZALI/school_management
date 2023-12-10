@@ -56,8 +56,8 @@
         <td><?= $parent['P_NUMBER']; ?></td>
         <td><?= $parent['S_ID']; ?></td>
         <td>
-            <a href="student_view.php?id=<?=$parent['P_NUMBER']; ?>" class="btn btn-info btn-sm">View</a>
-            <a href="student_edit.php?id=<?= $parent['P_NUMBER']; ?>" class="btn btn-success btn-sm">Edit</a>
+            <a href="parent_view.php?id=<?=$parent['P_NUMBER']; ?>" class="btn btn-info btn-sm">View</a>
+            <a href="parent_edit.php?id=<?= $parent['P_NUMBER']; ?>" class="btn btn-success btn-sm">Edit</a>
             <form action="parentcode.php" method="POST" class="d-inline">
                 <button type="submit" name="delete_parent" value="<?=$parent['P_NUMBER'];?>" class="btn btn-danger btn-sm">Delete</button>
             </form>
