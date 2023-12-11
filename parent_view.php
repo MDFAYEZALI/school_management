@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'dbconnect.php';
 ?>
 <!doctype html>
@@ -13,18 +12,18 @@ require 'dbconnect.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Update PARENT</title>
+    <title> PARENT VIEW DETAILS</title>
 </head>
 <body>
 <div class="container mt-5">
 
-    <?php include('message.php'); ?>
+
 
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Update Parent
+                    <h4>Parent 
                         <a href="parent_index.php" class="btn btn-danger float-end">BACK</a>
                     </h4>
                 </div>
@@ -40,21 +39,26 @@ require 'dbconnect.php';
                             $parent = mysqli_fetch_array($query_run);
                             ?>
 
-                            <form action="parentcode.php" method="POST">
                                <input type="hidden" name="PARENT_NUMBER" value= "<?= $p_number['id']; ?>">
                                 <div class="mb-3">
                                     <label>PARENT Name </label>
-                                    <input type="text" name="PARENT_NAME" value="<?= $parent['PARENT_NAME']; ?>"
+                                    
                                            class="form-control">
+                                    <p class="form-control"> 
+                                    <?= $parent['PARENT_NAME']; ?>
+                                     </p>
                                 </div>
                                 <div class="mb-3">
                                     <label>EMAIL </label>
-                                    <input type="text" name="EMAIL" value="<?= $parent['EMAIL']; ?>" class="form-control">
+                                    <p class="form-control"> 
+                                     <?= $parent['EMAIL']; ?>
+                                     </p>
                                 </div>
                                 <div class="mb-3">
                                     <label>PARENT NUMBER</label>
-                                    <input type="text" name="PARENT_NUMBER" value="<?= $parent['PARENT_NUMBER']; ?>"
-                                           class="form-control">
+                                    <p class="form-control"> 
+                                     <?= $parent['PARENT_NUMBER']; ?>
+                                     </p>
                                 </div>
 
                                 <br> <br> Student ID
@@ -70,7 +74,7 @@ require 'dbconnect.php';
                                     <button type="submit" name="update_parent" class="btn btn-primary">Update Parent
                                     </button>
                                 </div>
-                            </form>
+                            
 
                             <?php
                         } else {
