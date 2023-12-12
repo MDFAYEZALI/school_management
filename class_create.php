@@ -38,10 +38,6 @@ session_start();
                         <input type="text" name="CLASS_NAME" class="form-control">
                        </div>
                        <div class="mb-3">
-                       <label> Teacher Id </label>
-                        <input type="text" name="T_ID" class="form-control">
-                       </div>
-                       <div class="mb-3">
                         <button type="submit" name="save_class" class="btn btn-primary">Save Class</button>
                        </div>
                     </form>
