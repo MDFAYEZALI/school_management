@@ -22,7 +22,7 @@ session_start();
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Add Student 
+                    <h4>Add Class
                     <a href="class_index.php" class="btn btn-danger float-end">BACK</a>
                     </h4>
                 </div>
