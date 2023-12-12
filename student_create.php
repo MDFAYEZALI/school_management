@@ -51,7 +51,7 @@ session_start();
                        </div>
                        <div class="mb-3">
                        <label>Parent Phone</label>
-                        <input type="text" name="PARENT_NUMBER" class="form-control">
+                        <input type="text" name="P_NUMBER" class="form-control">
                        </div>
                        <div class="mb-3">
                         <button type="submit" name="save_student" class="btn btn-primary">Save Student</button>

@@ -72,7 +72,7 @@
             <div class="mb-3">
             <label>Parent Phone</label>
               <p class="form-control">
-            <?= $student['PARENT_NUMBER']?>
+            <?= $student['P_NUMBER']?>
             </p>
             </div>
                   

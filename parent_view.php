@@ -30,20 +30,20 @@ require 'dbconnect.php';
                 <div class="card-body">
 
                     <?php
-                    if (isset($_GET['id'])) {
-                        $p_number = mysqli_real_escape_string($con, $_GET['id']);
-                        $query = "SELECT * FROM parent WHERE id='$p_number'";
+                    if (isset($_GET['P_NUMBER'])) {
+                        $p_number = mysqli_real_escape_string($con, $_GET['P_NUMBER']);
+                        $query = "SELECT * FROM parent WHERE P_NUMBER='$p_number'";
                         $query_run = mysqli_query($con, $query);
 
                         if (mysqli_num_rows($query_run) > 0) {
                             $parent = mysqli_fetch_array($query_run);
                             ?>
 
-                               <input type="hidden" name="PARENT_NUMBER" value= "<?= $p_number['id']; ?>">
+                               <input type="hidden" name="P_NUMBER" value= "<?= $p_number['P_NUMBER']; ?>">
                                 <div class="mb-3">
                                     <label>PARENT Name </label>
                                     
-                                           class="form-control">
+                                           <class="form-control">
                                     <p class="form-control"> 
                                     <?= $parent['PARENT_NAME']; ?>
                                      </p>
@@ -57,23 +57,10 @@ require 'dbconnect.php';
                                 <div class="mb-3">
                                     <label>PARENT NUMBER</label>
                                     <p class="form-control"> 
-                                     <?= $parent['PARENT_NUMBER']; ?>
+                                     <?= $parent['P_NUMBER']; ?>
                                      </p>
                                 </div>
 
-                                <br> <br> Student ID
-                                <select class="input" name="student_id" required>
-                                    <option value=""> Select Student ID </option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3"> 3 </option>
-                                    <option value="4"> 4 </option>
-                                    <option value="5"> 5 </option>
-                                </select>
-                                <div class="mb-3">
-                                    <button type="submit" name="update_parent" class="btn btn-primary">Update Parent
-                                    </button>
-                                </div>
                             
 
                             <?php

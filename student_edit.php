@@ -66,7 +66,7 @@ require 'dbconnect.php';
                        </div>
                        <div class="mb-3">
                        <label>Parent Phone</label>
-                        <input type="text" name="PARENT_NUMBER"  value="<?= $student['PARENT_NUMBER']?>" class="form-control">
+                        <input type="text" name="P_NUMBER"  value="<?= $student['P_NUMBER']?>" class="form-control">
                        </div>
                        <div class="mb-3">
                         <button type="submit" name="update_student" class="btn btn-primary">Update Student</button>

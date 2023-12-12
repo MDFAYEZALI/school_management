@@ -12,7 +12,7 @@
     <body> 
         
         <div id="form">
-            <h1>Login Form</h1>
+            <h1>Login </h1>
             <form name="form" action="login.php" onsubmit="return isvalid()" method="POST">
                 <label>Username: </label>
                 <input type="text" id="user" name="user"></br></br>

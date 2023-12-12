@@ -26,9 +26,8 @@ if(isset($_POST['update_parent']))
     $p_name = mysqli_real_escape_string($con, $_POST['PARENT_NAME']);
     $email = mysqli_real_escape_string($con, $_POST['EMAIL']);
     $p_number = isset($_POST['P_NUMBER']) ? mysqli_real_escape_string($con, $_POST['P_NUMBER']) : '';
-    $S_ID = isset($_POST['S_ID']) ? mysqli_real_escape_string($con, $_POST['S_ID']) : '';
 
-    $query = " UPDATE SET parent SET PARENT_NAME=' $p_name', EMAI= '$email', P_NUMBER= '$p_number', S_ID= '$S_ID',
+    $query = " UPDATE SET parent SET PARENT_NAME=' $p_name', EMAI= '$email', P_NUMBER= '$p_number',
     WHERE P_NUMBER='$p_number'";
     $query_run = mysqli_query ($con,$query);
     if($query_run)
@@ -49,12 +48,12 @@ if(isset($_POST['save_parent']))
 {
     $p_name = mysqli_real_escape_string($con, $_POST['PARENT_NAME']);
     $email = mysqli_real_escape_string($con, $_POST['EMAIL']);
-    $p_number = mysqli_real_escape_string($con, $_POST['p_number']);
-    $S_ID = mysqli_real_escape_string($con, $_POST['S_ID']);
+    $p_number = mysqli_real_escape_string($con, $_POST['P_NUMBER']);
 
 
-    $query = "INSERT INTO parent (PARENT_NAME, EMAIL, P_NUMBER, S_ID) VALUES 
-        ('$p_name', '$email', '$p_number', '$S_ID')";
+
+    $query = "INSERT INTO parent (PARENT_NAME, EMAIL, P_NUMBER) VALUES 
+        ('$p_name', '$email', '$p_number')";
 
     $query_run = mysqli_query($con, $query); 
     if($query_run)

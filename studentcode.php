@@ -32,10 +32,10 @@ if(isset($_POST['update_student']))
     $address = mysqli_real_escape_string($con, $_POST['ADDRESS']);
     $s_phone = mysqli_real_escape_string($con, $_POST['NUMBER']);
     $class_id = mysqli_real_escape_string($con, $_POST['CLASS_ID']);
-    $p_phone= mysqli_real_escape_string($con, $_POST['PARENT_NUMBER']);
+    $p_phone= mysqli_real_escape_string($con, $_POST['P_NUMBER']);
 
-    $query = " UPDATE SET student SET STUDENT_FNAME=' $fname', STUDENT_LNAME= '$lname', ADDRESS= '$address', NUMBER= '$s_phone',
-    CLASS_ID= '$class_id', PARENT_NUMBER='$p_phone', WHERE STUDENT_ID='$student_id'";
+    $query = " UPDATE  student SET STUDENT_FNAME=' $fname', STUDENT_LNAME= '$lname', ADDRESS= '$address', NUMBER= '$s_phone',
+    CLASS_ID= '$class_id', P_NUMBER='$p_phone' WHERE STUDENT_ID='$student_id'";
     $query_run = mysqli_query ($con,$query);
     if($query_run)
     {
@@ -58,9 +58,9 @@ if(isset($_POST['save_student']))
     $address = mysqli_real_escape_string($con, $_POST['ADDRESS']);
     $s_phone = mysqli_real_escape_string($con, $_POST['NUMBER']);
     $class_id = mysqli_real_escape_string($con, $_POST['CLASS_ID']);
-    $p_phone= mysqli_real_escape_string($con, $_POST['PARENT_NUMBER']);
+    $p_phone= mysqli_real_escape_string($con, $_POST['P_NUMBER']);
 
-    $query = "INSERT INTO student (STUDENT_FNAME,STUDENT_LNAME,ADDRESS,NUMBER,CLASS_ID,PARENT_NUMBER) VALUES 
+    $query = "INSERT INTO student (STUDENT_FNAME,STUDENT_LNAME,ADDRESS,NUMBER,CLASS_ID,P_NUMBER) VALUES 
         ('$fname','$lname','$address','$s_phone',' $class_id',' $p_phone')";
 
     $query_run = mysqli_query($con,$query); 

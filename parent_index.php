@@ -36,7 +36,6 @@
     <th>Parent Name</th>
     <th>Email</th>
     <th>Parent Number</th>
-    <th>Student ID</th>
     <th>Action</th>
   </tr>
 </thead>
@@ -54,7 +53,6 @@
         <td><?= $parent['PARENT_NAME']; ?></td>
         <td><?= $parent['EMAIL']; ?></td>
         <td><?= $parent['P_NUMBER']; ?></td>
-        <td><?= $parent['S_ID']; ?></td>
         <td>
             <a href="parent_view.php?id=<?=$parent['P_NUMBER']; ?>" class="btn btn-info btn-sm">View</a>
             <a href="parent_edit.php?id=<?= $parent['P_NUMBER']; ?>" class="btn btn-success btn-sm">Edit</a>

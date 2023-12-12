@@ -4,7 +4,7 @@ session_start();
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,18 +39,10 @@ session_start();
                        </div>
                        <div class="mb-3">
                        <label>PARENT NUMBER</label>
-                        <input type="text" name="PARENT_NUMBER" class="form-control">
+                        <input type="text" name="P_NUMBER" class="form-control">
                        </div>
                      
-                       <br> <br> Student ID 
-                    <select class= "input" name="student id" required>
-                     <option value= "" > Select Student ID </option>
-                     <option value= "1" >1 </option>
-                     <option value= "2">2</option> 
-                    <option value= "3"> 3 </option> 
-                    <option value="4"> 4 </option> 
-                    <option value="5"> 5 </option>
-					          </select>
+                    
                        <div class="mb-3">
                         <button type="submit" name="save_parent" class="btn btn-primary">Save Parent</button>
                        </div>

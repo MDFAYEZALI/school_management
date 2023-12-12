@@ -60,7 +60,7 @@
         <td><?= $student['ADDRESS']; ?></td>
         <td><?= $student['NUMBER']; ?></td>
         <td><?= $student['CLASS_ID']; ?></td>
-        <td><?= $student['PARENT_NUMBER']; ?></td>
+        <td><?= $student['P_NUMBER']; ?></td>
         <td>
             <a href="student_view.php?id=<?= $student['STUDENT_ID']; ?>" class="btn btn-info btn-sm">View</a>
             <a href="student_edit.php?id=<?= $student['STUDENT_ID']; ?>" class="btn btn-success btn-sm">Edit</a>
