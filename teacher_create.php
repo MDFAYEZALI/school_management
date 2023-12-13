@@ -58,6 +58,9 @@ session_start();
                     <option value= "303"> 303 </option> 
                     <option value="404"> 404 </option> 
                     <option value="505"> 505 </option>
+                    <option value="606"> 606 </option> 
+                    <option value="707"> 707 </option>
+                    <option value="808"> 808 </option>
 					          </select>
                        </div>
                        <div class="mb-3">

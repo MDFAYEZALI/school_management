@@ -31,9 +31,9 @@ require 'dbconnect.php';
                 <div class="card-body">
 
                     <?php
-                    if (isset($_GET['id'])) {
-                        $p_number = mysqli_real_escape_string($con, $_GET['id']);
-                        $query = "SELECT * FROM parent WHERE id='$p_number'";
+                    if (isset($_GET['P_NUMBER'])) {
+                        $p_number = mysqli_real_escape_string($con, $_GET['P_NUMBER']);
+                        $query = "SELECT * FROM parent WHERE P_NUMBER='$p_number'";
                         $query_run = mysqli_query($con, $query);
 
                         if (mysqli_num_rows($query_run) > 0) {
@@ -41,7 +41,7 @@ require 'dbconnect.php';
                             ?>
 
                             <form action="parentcode.php" method="POST">
-                               <input type="hidden" name="PARENT_NUMBER" value= "<?= $p_number['id']; ?>">
+                               <input type="hidden" name="P_NUMBER" value= "<?= $p_number['P_NUMBER']; ?>">
                                 <div class="mb-3">
                                     <label>PARENT Name </label>
                                     <input type="text" name="PARENT_NAME" value="<?= $parent['PARENT_NAME']; ?>"

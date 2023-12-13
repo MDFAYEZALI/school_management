@@ -27,6 +27,7 @@
 <div class="card-header">
 <h4>STUDENT DETAILS
 <a href="student_create.php" class="btn btn-primary float-end">Add Students</a>
+<a href="home.php" class="btn btn-danger float-end">BACK</a>
 </h4>
 </div>
 <div class="card-body">

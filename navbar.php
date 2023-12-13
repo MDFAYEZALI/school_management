@@ -18,9 +18,12 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="student_index.php">Student</a></li>
       <li><a href="parent_index.php">Parent</a></li>
-      <li><a href="class_create.php">Class Create</a></li>
-      <li><a href="teacher_create.php">Teacher create</a></li>
+      <li><a href="class_index.php">Class </a></li>
+      <li><a href="teacher_index.php">Teacher </a></li>
+      <li><a href="login_index.php">Login</a></li>
     </ul>
+
+
   </div>
 </nav>
   

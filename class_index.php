@@ -25,8 +25,8 @@
 <div class="col-md-12">
 <div class="card">
 <div class="card-header">
-<h4>PARENT DETAILS
-<a href="parent_create.php" class="btn btn-primary float-end">Add Parents</a>
+<h4>CLASS DETAILS
+<a href="class_create.php" class="btn btn-primary float-end">Add Class</a>
 <a href="home.php" class="btn btn-danger float-end">BACK</a>
 </h4>
 </div>
@@ -34,30 +34,27 @@
 <table class="table table-bordered table-striped">
 <thead>
   <tr>
-    <th>Parent Name</th>
-    <th>Email</th>
-    <th>Parent Number</th>
-    <th>Action</th>
+    <th>Class Id</th>
+    <th>Class Name</th>
   </tr>
 </thead>
 <tbody>
   <?php 
-      $query = "SELECT * FROM parent";
+      $query = "SELECT * FROM class";
       $query_run = mysqli_query($con, $query);
 
       if(mysqli_num_rows($query_run) > 0)
       {
-          foreach($query_run as $parent)
+          foreach($query_run as $class)
           {
         ?>
         <tr>
-        <td><?= $parent['PARENT_NAME']; ?></td>
-        <td><?= $parent['EMAIL']; ?></td>
-        <td><?= $parent['P_NUMBER']; ?></td>
+        <td><?= $class['CLASS_ID']; ?></td>
+        <td><?= $class['CLASS_NAME']; ?></td>
         <td>
-            <a href="parent_edit.php?id=<?= $parent['P_NUMBER']; ?>" class="btn btn-success btn-sm">Edit</a>
-            <form action="parentcode.php" method="POST" class="d-inline">
-                <button type="submit" name="delete_parent" value="<?=$parent['P_NUMBER'];?>" class="btn btn-danger btn-sm">Delete</button>
+            <a href="class_edit.php?id=<?= $class['CLASS_ID']; ?>" class="btn btn-success btn-sm">Edit</a>
+            <form action="classcode.php" method="POST" class="d-inline">
+                <button type="submit" name="delete_teacher" value="<?=$class['CLASS_ID'];?>" class="btn btn-danger btn-sm">Delete</button>
             </form>
         </td>
         </tr>
