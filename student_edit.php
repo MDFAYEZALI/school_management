@@ -29,9 +29,9 @@ require 'dbconnect.php';
                 <div class="card-body">
 
                 <?php
-                if(isset($_GET['id']))
+                if(isset($_GET['STUDENT_ID']))
                 {
-                   $student_id = mysqli_real_escape_string($con,$_GET['id']);
+                   $student_id = mysqli_real_escape_string($con,$_GET['STUDENT_ID']);
                    $query = "SELECT * FROM student WHERE STUDENT_ID='$student_id' ";
                    $query_run = mysqli_query($con, $query);
 

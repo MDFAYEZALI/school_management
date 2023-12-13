@@ -54,7 +54,7 @@
         <td>
             <a href="class_edit.php?id=<?= $class['CLASS_ID']; ?>" class="btn btn-success btn-sm">Edit</a>
             <form action="classcode.php" method="POST" class="d-inline">
-                <button type="submit" name="delete_teacher" value="<?=$class['CLASS_ID'];?>" class="btn btn-danger btn-sm">Delete</button>
+                <button type="submit" name="delete_class" value="<?=$class['CLASS_ID'];?>" class="btn btn-danger btn-sm">Delete</button>
             </form>
         </td>
         </tr>
