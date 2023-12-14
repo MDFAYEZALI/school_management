@@ -27,8 +27,7 @@ if(isset($_POST['update_parent']))
     $email = mysqli_real_escape_string($con, $_POST['EMAIL']);
     $p_number = isset($_POST['P_NUMBER']) ? mysqli_real_escape_string($con, $_POST['P_NUMBER']) : '';
 
-    $query = " UPDATE  parent SET PARENT_NAME=' $p_name', EMAI= '$email', P_NUMBER= '$p_number',
-    WHERE P_NUMBER='$p_number'";
+    $query = "UPDATE parent SET PARENT_NAME='$p_name', EMAIL='$email' WHERE P_NUMBER='$p_number'";
     $query_run = mysqli_query ($con,$query);
     if($query_run)
     {
