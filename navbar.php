@@ -20,6 +20,7 @@
       <li><a href="parent_index.php">Parent</a></li>
       <li><a href="class_index.php">Class </a></li>
       <li><a href="teacher_index.php">Teacher </a></li>
+      <li><a href="medrec_index.php">Medical Recoed </a></li>
       <li><a href="login_index.php">Login</a></li>
     </ul>
 
