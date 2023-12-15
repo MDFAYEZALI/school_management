@@ -15,6 +15,7 @@
 <body>
     <?php include'navbar.php' ?>
 <div class="container">
+<img src="St Alphonsus.jpg" alt="St Alphonsus Primary School" style="width:300px;height:300px; position:fixed;">
     <h1>St Alphonsus Primary School</h1>
 </div>
 
