@@ -1,11 +1,10 @@
-
 <!doctype html>
 <html lang="en">
  
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Class Edit</title>
+    <title>Parent Edit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
  
@@ -19,8 +18,8 @@
         require 'dbconnect.php';
  
         if (isset($_GET['id'])) {
-          $cid = mysqli_real_escape_string($con, $_GET['id']);
-            $query = "SELECT * FROM class WHERE CLASS_ID ='$cid'";
+            $Studentid = mysqli_real_escape_string($con, $_GET['id']);
+            $query = "SELECT * FROM medical WHERE STUDENT_ID ='$Studentid'";
  
             $query_run = mysqli_query($con, $query);
  
@@ -29,21 +28,20 @@
             }
  
             if (mysqli_num_rows($query_run) > 0) {
-                $class = mysqli_fetch_assoc($query_run);
+                $medical = mysqli_fetch_assoc($query_run);
         ?>
-                <form action="classcode.php" method="POST">
-                    <input type="hidden" name="CLASS_ID" value="<?= $cid ?>">
-                    <div class="mb-3">
-                        <label>Class Id</label>
-                        <input type="text" name="CLASS_ID" value="<?= $class['CLASS_ID'] ?>" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Class Name</label>
-                        <input type="text" name="CLASS_NAME" value="<?= $class['CLASS_NAME'] ?>" class="form-control">
-                    </div>
-      
-                    <button type="submit" name="update_class" class="btn btn-primary">Update Class</button>
-                </form>
+            <form action="medreccode.php" method="POST">
+                <input type="hidden" name="STUDENT_ID" value="<?= $Studentid ?>">
+                <div class="mb-3">
+                <label>Student Id</label>
+                <input type="text" name="STUDENT_ID" value="<?= $medical['STUDENT_ID'] ?>" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label>Allergies</label>
+                <input type="text" name="ALLERGIES" value="<?= $medical['ALLERGIES'] ?>" class="form-control">
+               </div>
+                <button type="submit" name="update_medrec" class="btn btn-primary">Update Record</button>
+            </form>
         <?php
             } else {
                 echo "<h4>No Such Id Found</h4>";

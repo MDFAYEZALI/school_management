@@ -20,7 +20,7 @@
       <li><a href="parent_index.php">Parent</a></li>
       <li><a href="class_index.php">Class </a></li>
       <li><a href="teacher_index.php">Teacher </a></li>
-      <li><a href="medrec_index.php">Medical Recoed </a></li>
+      <li><a href="medrec_index.php">Medical Record </a></li>
       <li><a href="login_index.php">Login</a></li>
     </ul>
 
@@ -29,8 +29,8 @@
 </nav>
   
 <div class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+  <h3>Welcome to St Alphonsus Primary School. </h3>
+  <p>A School that insures your childs future.</p>
 </div>
 
 </body>
